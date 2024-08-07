@@ -1,0 +1,387 @@
+body {
+  text-transform: capitalize;
+  background-color: #ddd;
+  margin: 0; /* Ensure there's no default margin */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.image-title {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.header-image {
+  width: 100px;  
+  height: 40px; 
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.header-links a {
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.find-jobs-link {
+  color: blue;
+}
+
+.facial-recognition-link {
+  color: black;
+}
+
+.header-links a:hover {
+  color: #007bff;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; 
+}
+
+.header-icon {
+  width: 30px; 
+  height: 30px;
+  margin: 0 10px; 
+  cursor: pointer;
+}
+
+.icon-separator {
+  width: 1px;
+  height: 30px; 
+  background-color: #ccc;
+  margin: 0 10px; 
+}
+
+.header-icon:hover {
+  transform: scale(1.1);
+}
+
+.text-button {
+  display: flex;
+  align-items: center;
+  position: relative; 
+}
+
+.header-button {
+  padding: 4px 20px; 
+  font-size: 14px;   
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(136, 12, 167);
+  color: white;
+}
+
+.header-button:hover {
+  background-color: #0056b3;
+}
+
+.options-container {
+  position: absolute; 
+  top: 100%; 
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.option-button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.option-button:hover {
+  background-color: #ddd;
+}
+
+.background-section {
+  position: relative; 
+  width: 100%; 
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden; 
+}
+
+.background-image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.text-overlay {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: rgb(250, 236, 236); 
+  text-align: center; 
+  font-size: 36px; 
+  padding: 20px; 
+  border-radius: 10px; 
+}
+
+.text-overlay p {
+  font-size: 18px; 
+  margin-top: 20px; 
+  font-weight: normal; 
+}
+
+.text-overlay strong {
+  font-weight: bold; 
+}
+
+.form-overlay {
+  position: absolute; 
+  top: 70%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 80%; 
+  max-width: 600px; 
+  text-align: center; 
+}
+
+.form-inputs {
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 20px; 
+}
+
+.form-input {
+  flex: 1; 
+  margin: 0 5px;
+  padding: 10px; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 14px; 
+}
+
+.search-button {
+  padding: 10px 20px; 
+  font-size: 14px; 
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(136, 12, 167);
+  color: white;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.latest-jobs {
+  padding: 20px;
+  background-color: #fff; 
+  text-align: left; 
+  margin: 20px 0; 
+}
+
+.latest-jobs h2 {
+  color: black;
+  font-size: 24px; 
+  font-weight: bold; 
+}
+.latest-jobs {
+  padding: 20px;
+  background-color: #fff; 
+  text-align: left; 
+  margin: 20px 0; 
+}
+
+.latest-jobs h2 {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  padding: 20px;
+  justify-content: space-between; 
+}
+
+.job-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(25% - 20px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  text-align: center; 
+}
+
+.job-title {
+  color: purple;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.job-location {
+  font-size: 14px;
+  color: #555; 
+}
+
+.job-time {
+  font-size: 12px;
+  color: #888; 
+}
+.top-companies {
+  background-color: grey;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.top-companies-content {
+  margin-bottom: 20px;
+}
+
+.top-companies-content h2 {
+  color: black;
+  font-size: 24px;
+  margin: 0;
+}
+
+.top-companies-content p {
+  color: #333; 
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+
+.companies-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.company-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(20% - 20px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-card img {
+  width: 70%;
+  height: 80px;
+}
+
+.companies-cards-container > .company-card:nth-child(n+17) {
+  width: calc(20px - 20px); 
+}
+
+.companies-cards-container > .company-card:nth-child(n+13):nth-child(-n+15) {
+  width: calc(20% - 20px); 
+}
+.facial-recognition-section {
+  display: flex;
+  align-items: flex-start; 
+  padding: 40px 20px;
+  background-color: #f9f9f9; 
+  position: relative; 
+}
+
+.facial-recognition-image {
+  flex: 1;
+  max-width: 50%; 
+  position: relative;
+}
+
+.facial-recognition-text {
+  flex: 2;
+  padding: 20px;
+}
+
+.facial-recognition-text h3 {
+  color: black;
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.facial-recognition-text p {
+  color: gray;
+  font-size: 14px;
+  margin: 0;
+}
+
+.facial-recognition-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(136, 12, 167);
+  color: white;
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px; 
+}
+
+.facial-recognition-button:hover {
+  background-color: #0056b3;
+}
+.opportunities-section {
+  background-color: #ddd; /* Grey background */
+  text-align: center; /* Center align text */
+  padding: 40px 20px; /* Add padding around the section */
+}
+
+.opportunities-section h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 24px; /* Adjust font size as needed */
+  margin: 0 0 10px; /* Space below the heading */
+}
+
+.opportunities-section p {
+  color: #666; /* Soft black color */
+  font-size: 16px; /* Smaller font size */
+  margin: 0 0 20px; /* Space below the paragraph */
+}
+
+.opportunities-section .join-now-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(136, 12, 167);
+  color: white;
+}
+
+.opportunities-section .join-now-button:hover {
+  background-color: #0056b3;
+}
