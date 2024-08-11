@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderComponent from './Components/HeaderComponent';
 import SignInComponent from './Components/SignIn';
+import SignUpComponent from './Components/SignUp';
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,18 +11,19 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import logo from './Images/Group84.png'; 
 
-// @ts-ignore
+
 function App() {
   return (
     <Router>
-    <Routes>
-      <Route path="/" element={<HeaderComponent />} />
-      <Route path="/signin" element={<SignInComponent />} />
-    </Routes>
-  </Router>
+      <Routes>
+        <Route path="/" element={<HeaderComponent />} />
+        <Route path="/signin" element={<SignInComponent />} />
+        <Route path="/signup" element={<SignUpComponent />} />
+      </Routes>
+    </Router>
   );
-}
+};
+
 
 export default App;

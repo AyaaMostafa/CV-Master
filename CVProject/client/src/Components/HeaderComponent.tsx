@@ -1,11 +1,11 @@
-// HeaderComponent.tsx
+
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
-import '../style/style.scss'; // Import your styles here
+import { useNavigate } from 'react-router-dom'; 
+import '../style/style.scss'; 
 
 const HeaderComponent = () => {
   const [showOptions, setShowOptions] = useState(false);
-  const navigate = useNavigate(); // Create navigate function
+  const navigate = useNavigate(); 
 
   const handleButtonClick = () => {
     setShowOptions(!showOptions);
@@ -13,11 +13,11 @@ const HeaderComponent = () => {
 
   const handleOptionClick = (option: string) => {
     if (option === 'Company') {
-      navigate('/signin'); // Navigate to the SignIn page
+      navigate('/signin'); 
     } else {
       alert(`You selected: ${option}`);
     }
-    setShowOptions(false); // Hide options after selection
+    setShowOptions(false); 
   };
 
   const handleIconClick = (iconName: string) => {

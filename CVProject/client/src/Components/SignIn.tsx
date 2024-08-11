@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import '../style/style.scss';  
 
 const SignInComponent = () => {
   return (
     <div className="signin-container">
-      <img src="home pic1-01 1.png" alt="Background" className="background-image" />
+      <img src="Group 220.png" alt="Background" className="background-image" />
+      
+      <img src="Group 86.png" alt="Icon" className="comp-icon" />
       
       <div className="signin-form-container">
         <h2>Sign In and Start Applying For Jobs</h2>
@@ -24,7 +27,7 @@ const SignInComponent = () => {
           <button className="signin-button">Sign In</button>
         </form>
         <p className="signup-prompt">
-          Don't have an account? <a href="#" className="signup-link">Sign Up</a>
+          Don't have an account? <Link to="/signup" className="signup-link">Sign Up</Link>
         </p>
         
         <div className="opportunities-section">
