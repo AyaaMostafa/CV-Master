@@ -1,15 +1,22 @@
+// HeaderComponent.tsx
 import React, { useState } from 'react';
-import '../style/style.scss';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
+import '../style/style.scss'; // Import your styles here
 
 const HeaderComponent = () => {
   const [showOptions, setShowOptions] = useState(false);
+  const navigate = useNavigate(); // Create navigate function
 
   const handleButtonClick = () => {
     setShowOptions(!showOptions);
   };
 
   const handleOptionClick = (option: string) => {
-    alert(`You selected: ${option}`);
+    if (option === 'Company') {
+      navigate('/signin'); // Navigate to the SignIn page
+    } else {
+      alert(`You selected: ${option}`);
+    }
     setShowOptions(false); // Hide options after selection
   };
 
@@ -108,26 +115,25 @@ const HeaderComponent = () => {
                 className="company-image" 
               />
             </div>
-            
           ))}
         </div>
         <div className="facial-recognition-section">
-  <div className="facial-recognition-image">
-    <img src="download 1.png" alt="Facial Recognition" className="facial-recognition-img" />
-  </div>
-  <div className="facial-recognition-text">
-    <h3>Facial Recognition</h3>
-    <p>
-      Video interviews offer a wealth of data. Data scientists use computer vision and audio analysis to evaluate candidates' non-verbal cues, speech patterns, and overall interview performance. This data-driven approach enhances the selection process.
-    </p>
-  </div>
-  <button className="facial-recognition-button">Try Now</button>
-</div>
-<div className="opportunities-section">
-  <h2>Get ready for more opportunities!</h2>
-  <p>You are minutes away from the right job.</p>
-  <button className="join-now-button">Join Now</button>
-</div>
+          <div className="facial-recognition-image">
+            <img src="download 1.png" alt="Facial Recognition" className="facial-recognition-img" />
+          </div>
+          <div className="facial-recognition-text">
+            <h3>Facial Recognition</h3>
+            <p>
+              Video interviews offer a wealth of data. Data scientists use computer vision and audio analysis to evaluate candidates' non-verbal cues, speech patterns, and overall interview performance. This data-driven approach enhances the selection process.
+            </p>
+          </div>
+          <button className="facial-recognition-button">Try Now</button>
+        </div>
+        <div className="opportunities-section">
+          <h2>Get ready for more opportunities!</h2>
+          <p>You are minutes away from the right job.</p>
+          <button className="join-now-button">Join Now</button>
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderComponent from './Components/HeaderComponent';
+import SignInComponent from './Components/SignIn';
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,10 +15,12 @@ import logo from './Images/Group84.png';
 // @ts-ignore
 function App() {
   return (
-    <div className="App">
-      <HeaderComponent />
-      
-    </div>
+    <Router>
+    <Routes>
+      <Route path="/" element={<HeaderComponent />} />
+      <Route path="/signin" element={<SignInComponent />} />
+    </Routes>
+  </Router>
   );
 }
 

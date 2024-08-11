@@ -121,7 +121,7 @@ body {
 .background-section {
   position: relative; 
   width: 100%; 
-  height: 500px; /* Adjust height as needed */
+  height: 700px; /* Increased height for more space */
   overflow: hidden; 
 }
 
@@ -133,7 +133,7 @@ body {
 
 .text-overlay {
   position: absolute; 
-  top: 50%; 
+  top: 40%; /* Adjusted for new height */
   left: 50%; 
   transform: translate(-50%, -50%); 
   color: rgb(250, 236, 236); 
@@ -155,7 +155,7 @@ body {
 
 .form-overlay {
   position: absolute; 
-  top: 70%; 
+  top: 60%; /* Adjusted for new height */
   left: 50%; 
   transform: translateX(-50%); 
   background-color: rgba(0, 0, 0, 0.5); 
@@ -354,22 +354,22 @@ body {
   background-color: #0056b3;
 }
 .opportunities-section {
-  background-color: #ddd; /* Grey background */
-  text-align: center; /* Center align text */
-  padding: 40px 20px; /* Add padding around the section */
+  background-color: #ddd; 
+  text-align: center; 
+  padding: 40px 20px; 
 }
 
 .opportunities-section h2 {
   color: black;
   font-weight: bold;
-  font-size: 24px; /* Adjust font size as needed */
-  margin: 0 0 10px; /* Space below the heading */
+  font-size: 24px;
+  margin: 0 0 10px; 
 }
 
 .opportunities-section p {
-  color: #666; /* Soft black color */
-  font-size: 16px; /* Smaller font size */
-  margin: 0 0 20px; /* Space below the paragraph */
+  color: #666; 
+  font-size: 16px; 
+  margin: 0 0 20px; 
 }
 
 .opportunities-section .join-now-button {
@@ -385,3 +385,163 @@ body {
 .opportunities-section .join-now-button:hover {
   background-color: #0056b3;
 }
+.signin-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signin-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.signin-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.signin-form-container h2 {
+  padding-top: 30px;
+  font-size: 17px; 
+  margin-bottom: 20px;
+  text-align: center; 
+}
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.form-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.form-label {
+  display: block;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: #333;
+  font-weight: bold; 
+}
+
+.remember-me {
+  font-size: 14px;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: underline;
+  color: black;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.signin-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(136, 12, 167);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.signin-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-prompt {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.company-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(136, 12, 167);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.company-button:hover {
+  background-color: #0056b3;
+}
+.opportunities-section {
+  background-color: #ddd; 
+  padding: 10px; 
+  margin-bottom: 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 5px; 
+}
+
+.opportunities-text {
+  color: black;
+  font-size: 10px; 
+  margin: 0; 
+}
+
+.create-account-link {
+  color: #007bff; 
+  font-size: 10px; 
+  margin: 0; 
+  text-decoration: none; 
+}
+
+.create-account-link:hover {
+  text-decoration: underline; 
+}
+
