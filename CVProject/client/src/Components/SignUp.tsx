@@ -21,7 +21,7 @@ const SignUpComponent = () => {
           <img src="Group 251.png" alt="Below Left Image" className="below-left-image" />
         </div>
         <div className="signup-form-container">
-          <h2>Sign Up and Start Applying For Jobs</h2>
+          <h2>Sign In and Start Applying For Jobs</h2>
           <form className="signup-form">
             <div className="form-row">
               <div className="form-group">
@@ -58,8 +58,6 @@ const SignUpComponent = () => {
           </p>
         </div>
       </div>
-      
-      <button className="company-button">Company?</button>
     </div>
   );
 };

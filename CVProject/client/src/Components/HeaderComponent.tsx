@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import '../style/style.scss'; 
@@ -12,8 +11,10 @@ const HeaderComponent = () => {
   };
 
   const handleOptionClick = (option: string) => {
-    if (option === 'Company') {
+    if (option === 'Employer') {
       navigate('/signin'); 
+    } else if (option === 'Company') {
+      navigate('/company-signin');
     } else {
       alert(`You selected: ${option}`);
     }
