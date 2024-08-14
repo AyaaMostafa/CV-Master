@@ -15,6 +15,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CompanySignUp from './Components/CompanySignUp';
 import UploadCv from './Components/UploadCv';
 import Cv from './Components/Cv';
+import Explore from './Components/Explore';
+import WorkDescription from './Components/WorkDescription';
 
 
 
@@ -23,6 +25,7 @@ import Cv from './Components/Cv';
 
 function App() {
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<HeaderComponent />} />
@@ -32,10 +35,13 @@ function App() {
         <Route path="/companysignup" element={<CompanySignUp />} />
         <Route path="/upload-cv" element={<UploadCv />} />
         <Route path="/cv" element={<Cv />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/work-description" element={<WorkDescription />} />
        
       </Routes>
     </Router>
   );
+  
 };
 
 
