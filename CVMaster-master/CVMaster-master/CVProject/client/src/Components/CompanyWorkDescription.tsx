@@ -136,7 +136,7 @@ const CompanyWorkDescription: React.FC = () => {
         <div className="comp-similar-jobs-container">
           {similarJobs.map((job, index) => (
             <div key={index} className="job-card">
-              <div className="card-content">
+              <div className="comp-card-content">
                 <h3 className="job-title">{job.title}</h3>
                 <p className="job-location">{job.location}</p>
                 <p className="job-time">{job.time}</p>

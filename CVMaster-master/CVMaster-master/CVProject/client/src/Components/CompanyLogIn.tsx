@@ -22,6 +22,7 @@ const CompanySignIn = () => {
       console.log('Sign-in successful:', response.data);
       navigate('/companyuploadcv'); 
     } catch (err: any) {
+
       setError('Sign-in failed. Please check your credentials.');
       console.error('Sign-in error:', err);
     }

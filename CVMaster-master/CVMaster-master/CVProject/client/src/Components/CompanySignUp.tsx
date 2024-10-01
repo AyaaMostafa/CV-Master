@@ -16,7 +16,9 @@ const CompanySignUp = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
- 
+  const handleUploadCvClick = () => {
+    navigate('/cv');
+  };
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };

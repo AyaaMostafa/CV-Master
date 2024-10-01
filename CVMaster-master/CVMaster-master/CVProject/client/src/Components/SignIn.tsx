@@ -20,7 +20,8 @@ const SignInComponent = () => {
       console.log(response);
 
      
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTk2ZTI0ZjVkMGIzNmMwNjhiZmYyZSIsInJvbGUiOiJhcHBsaWNhbnQiLCJmaXJzdE5hbWUiOiJheWEiLCJsYXN0TmFtZSI6Im1vcyIsImlhdCI6MTcyNjU3ODUyNiwiZXhwIjoxNzI2NjY0OTI2fQ.qONOXaHnLc0gxlPuDPEV64uaFaR1fP57HVTRZTubUUk"
+      const token = response.data.token
+      console.log(token);
       ; 
       if (token) {
         localStorage.setItem('authToken', token);

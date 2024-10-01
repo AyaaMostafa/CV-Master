@@ -1301,8 +1301,8 @@ body {
 }
 .job-item-wrapper {
   display: flex;
-  align-items: center;
-  margin-bottom: 1px; 
+  justify-content: space-between; 
+  margin: 1px 600%;
 }
 
 .profile-image {
@@ -1330,6 +1330,8 @@ body {
 
 .small-white-div {
   background-color: white;
+  display: flex;
+  justify-content: space-between;
   margin-left: 100px; 
   border-radius: 8px;
   padding: 10px;
@@ -1517,8 +1519,10 @@ body {
   height: 150px;
 }
 
-.card-content {
+.comp-card-content {
   text-align: left; 
+  gap: 15px;
+  margin: 12%;
 }
 
 .job-title {
@@ -1661,7 +1665,9 @@ margin: 0 -18% 0 0%;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 0 0 30px
+  margin: 230px 0 0 0;
+  height: 200px;
+  width: 300px;
 }
 
 .info-card-content {

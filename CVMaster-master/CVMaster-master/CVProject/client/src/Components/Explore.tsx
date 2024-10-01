@@ -20,7 +20,7 @@ const Explore: React.FC = () => {
         <div className="job-header">
           <span className="job-title">{job.title}</span>
           <div className="job-options">
-            <span className="option">{job.type}</span>
+            <span className="option">{job.type} </span>
             <span className="option">{job.remote ? 'Remote' : 'On-site'}</span>
           </div>
         </div>
@@ -32,7 +32,6 @@ const Explore: React.FC = () => {
           {job.timeAgo}
         </div>
       </div>
-      <img src={job.logoUrl} alt="Job Icon" className="job-icon" />
     </Link>
   );
 
@@ -88,7 +87,7 @@ const Explore: React.FC = () => {
       <div className="job-list">
         <div className="small-white-div">
           <span className="small-div-title">Recommended</span>
-        </div>
+        
         <div className="job-item-wrapper">
           <div className="exp-info-card">
             <div className="info-card-content">
@@ -130,7 +129,7 @@ const Explore: React.FC = () => {
             </div>
           </div>
         </div>
-
+        </div>
         {loading ? (
           <div>Loading job listings...</div>
         ) : (

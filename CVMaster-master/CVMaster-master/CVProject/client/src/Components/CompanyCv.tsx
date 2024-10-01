@@ -1,11 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import UserAPIs from '../api/user.api'; 
 import '../style/style.scss';
 
 const CompanyCv: React.FC = () => {
   const [publicProfile, setPublicProfile] = useState(true);
   const [publicVisibility, setPublicVisibility] = useState(true);
   const [immediateStart, setImmediateStart] = useState(false);
+  const [cvData, setCvData] = useState<any>(null); 
+  const [loading, setLoading] = useState(true);
+  
+  const applicantId = 'applicantId'; 
+  const [token, setToken] = useState<string | null>(null);
+
+  const getTokenFromAPI = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/v1/companies/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: 'yourUsername',
+          password: 'yourPassword',
+        }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch token');
+      }
+      
+      const data = await response.json();
+      return data.token; 
+    } catch (error) {
+      console.error('Error fetching token:', error);
+      return null; 
+    }
+  };
+
+  const fetchCv = async () => {
+    if (!token) return; 
+    try {
+      const response = await new UserAPIs().getCvApi(applicantId, token);
+      setCvData(response.data);
+    } catch (error) {
+      console.error('Error fetching CV:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    const fetchToken = async () => {
+      const fetchedToken = await getTokenFromAPI();
+      setToken(fetchedToken);
+    };
+    
+    fetchToken();
+  }, []);
+
+  useEffect(() => {
+    fetchCv();
+  }, [token]); 
 
   const handleIconClick = (iconName: string) => {
     console.log(`${iconName} clicked`);
@@ -46,22 +102,27 @@ const CompanyCv: React.FC = () => {
       
       <div className="cv-content-container">
         <div className="cv-content">
-          <div className="profile-section">
-            <img src="Group 329.png" alt="Profile" className="profile-image" />
-            <div className="profile-text">
-              <div className="profile-name">Taaly</div>
-              <div className="profile-job-title">Information technology services</div>
-              <div className="profile-location">Liverpool, United Kingdom . 220 employees</div>
-              <div className="social-icons">
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <img src="Social (1).png" alt="LinkedIn" className="social-icon" />
-                </a>
-                <a href="https://www.google.com.eg/" target="_blank" rel="noopener noreferrer">
-                  <img src="Vector (1).png" alt="GitHub" className="social-icon" />
-                </a>
+          {loading ? (
+            <p>Loading CV...</p>
+          ) : cvData ? (
+            <div className="profile-section">
+              <img src={cvData.profileImage || 'Group 329.png'} alt="Profile" className="profile-image" />
+              <div className="profile-text">
+                <div className="profile-name">{cvData.name || 'Name Placeholder'}</div>
+                <div className="profile-job-title">{cvData.jobTitle || 'Job Title Placeholder'}</div>
+                <div className="profile-location">{cvData.location || 'Location Placeholder'}</div>
+                <div className="social-icons">
+                  {cvData.socialLinks && cvData.socialLinks.map((link: any) => (
+                    <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer">
+                      <img src={link.icon || 'placeholder_icon.png'} alt={link.platform} className="social-icon" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <p>No CV data available.</p>
+          )}
 
           <div className="info-card">
             <div className="info-card-content">
@@ -116,7 +177,7 @@ const CompanyCv: React.FC = () => {
                 <a href="mailto:HR@gmail.com" className="info-text">HR@gmail.com</a>
                 <span className="info-text">Industry: Information technology services</span>
               </div>
-              <span className="info-text1">Location : Liverpool, United Kingdom</span>
+              <span className="info-text1">Location: Liverpool, United Kingdom</span>
               <p className="info-paragraph">
                 Taaly is a 1-on-1 gamified AI integration platform that connects new migrants with natives. You practice the new language using video chat with a native speaker moderated by AI to eventually be able to communicate with everyone and find your place in society.
               </p>

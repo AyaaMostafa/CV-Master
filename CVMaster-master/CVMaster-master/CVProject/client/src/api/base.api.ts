@@ -9,8 +9,7 @@ class BaseAPIs {
 
   constructor() {
     this.baseUrl = 'http://10.100.102.6:6969/api/v1';
-
   }
 }
-
+//
 export default BaseAPIs;

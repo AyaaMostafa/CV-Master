@@ -13,6 +13,7 @@ const CompanyUploadCv: React.FC = () => {
     navigate('/company-cv');
   };
 
+  const token = localStorage.getItem('authToken');
   const handleIconClick = (iconName: string) => {
     console.log(`${iconName} clicked`);
   };
@@ -34,7 +35,7 @@ const CompanyUploadCv: React.FC = () => {
     const userAPIs = new UserAPIs();
 
     try {
-      await userAPIs.uploadCVApi(applicantId, file);
+      await userAPIs.uploadCVApi(applicantId, file, token);
       setSuccess('CV uploaded successfully!');
       setError(null); 
     } catch (err: any) {
@@ -81,16 +82,7 @@ const CompanyUploadCv: React.FC = () => {
           </div>
           <p className="upload-cv-support-text">Supported files: .docx, .doc or .pdf, with maximum size of 5MB</p>
           <form onSubmit={handleSubmit} className="upload-cv-form">
-            <div className="form-group">
-              <label htmlFor="applicant-id">Applicant ID:</label>
-              <input
-                type="text"
-                id="applicant-id"
-                value={applicantId}
-                onChange={(e) => setApplicantId(e.target.value)}
-                required
-              />
-            </div>
+          
             <div className="form-group">
               <label htmlFor="cv-file">CV File:</label>
               <input
@@ -107,8 +99,10 @@ const CompanyUploadCv: React.FC = () => {
           </form>
         </div>
         <div className="button-container">
-          <button className="back-button" onClick={() => navigate(-1)}>Back</button>
-          <button className="get-started-button">Get Started</button>
+        <button className="back-button" onClick={() => navigate(-1)}>Back</button>
+        <button className="get-started-button" onClick={() => navigate('/company-work-description')}>
+            Get Started
+          </button> 
         </div>
       </div>
     </div>
