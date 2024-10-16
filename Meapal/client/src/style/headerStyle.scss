@@ -1,0 +1,57 @@
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    margin-right: 20px;
+  }
+  
+  .logo-icon {
+    height: 40px; 
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-link:hover {
+    color: rgb(175, 12, 47); 
+  }
+  
+  .language-icons {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    margin-left: 300px;
+  }
+  
+  .language-icon {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .divider {
+    width: 1px; 
+    height: 20px; 
+    background-color: rgba(211, 211, 211, 0.726); 
+  }
+  
+  .contact-button {
+    background-color: rgb(175, 12, 47);
+    color: rgba(255, 255, 255, 0.904);
+    border: none;
+    border-radius: 7px;
+    padding: 5px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  
