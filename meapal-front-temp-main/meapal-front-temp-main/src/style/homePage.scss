@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+$blue-color: #182955;
+$red-color: #b7202f;
+.homepage-responsive-h2 {
+  font-weight: bold;
+  color: $blue-color;
+  .highlight {
+    color: $red-color;
+  }
+}
+
+.homepage-responsive-text {
+  font-size: medium;
+  font-family: 'Heebo', sans-serif;
+}
+
+.homepage-responsive-img {
+  width: 100%;
+  margin: 30px 0px;
+}
+.vision-button {
+  margin-top: 10px;
+  background-color: rgb(175, 12, 47);
+  color: rgba(255, 255, 255, 0.904);
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px; 
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.title-highlight{
+  font-family: 'Saira Stencil One', sans-serif;
+}
+.homepage-responsive {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px 100px;
+  margin-bottom: 0px;
+  align-items: center;
+}
+// Small screens (mobiles)
+@media (max-width: 600px) {
+  .homepage-responsive {
+    margin: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.info-box-container{
+  background-color: #fff;
+}
+.info-box-container-right{
+  display: flex;
+  justify-content: end;
+  background-color: #fff;
+}
+.info-box-responsive{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  max-width: 1200px;
+  padding: 25px;
+}
+.info-box-responsive-right{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 170px;
+  border-bottom-left-radius: 170px;
+  max-width: 1200px;
+  padding: 25px;
+}
+.planet-background-right{
+  position: absolute;
+  width: 390px;
+  top: 830px;
+  right: 22.3%;
+}
+.homepage {
+  margin: 30px 100px;
+
+  .homepage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%; 
+
+    h1, h2, p {
+      margin: 10px 0;
+      padding: 0 10px; 
+    }
+  }
+
+  .homepage-h1 {
+    font-size: 2.5vw; 
+    font-weight: 500;
+    color: #3b3a3aee;
+  }
+
+  .homepage-h2 {
+    font-weight: bold;
+    color: $blue-color;
+    font-size: 3vw;
+
+    .highlight {
+      color: $red-color;
+    }
+  }
+
+  .homepage-p {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #3b3a3aee;
+    max-width: 80%; 
+  }
+
+
+
+  .icon {
+    margin: 10px;
+    max-width: 80%; 
+    height: auto;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    width: 100%; 
+
+    .card {
+      flex: 1 1 calc(33.33% - 20px); 
+      margin: 10px;
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      text-align: start;
+      cursor: pointer;
+      justify-content: space-between;
+
+      &.purple-card {
+        background-color: $blue-color;
+      }
+
+      &.red-card {
+        background-color: $red-color;
+      }
+
+      .card-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 5px;
+      }
+
+      .card-subtitle {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 5px 0;
+        font-style: italic;
+      }
+
+      .card-link {
+        font-weight: bold;
+        margin-top: 15px;
+        display: block;
+        text-align: end;
+      }
+    }
+  }
+
+  .text-sections {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+
+    .text-row {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-between;
+
+      .text-block {
+        flex: 1 1 calc(50% - 20px); 
+        padding: 20px;
+        text-align: center;
+
+        &:not(:last-child) {
+          border-right: 2px dashed #2e2d2d;
+        }
+
+        .text-title {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        .red-text {
+          color: $red-color;
+        }
+
+        .purple-text {
+          color: $blue-color;
+        }
+
+        .text-description {
+          font-size: 1rem;
+          color: #333;
+          font-style: italic;
+        }
+      }
+    }
+
+    .horizontal-divider {
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
+  }
+
+  .info-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1000px;
+
+    &.reverse {
+      flex-direction: row-reverse; 
+    }
+
+    .info-image {
+      max-width: 100%;
+      width: 300px; 
+      margin: 10px;
+    }
+
+    .info-text {
+      padding: 10px 20px;
+      max-width: 600px;
+      text-align: left;
+
+      .small-black-text {
+        font-size: 1rem;
+      }
+
+      .bold-purple-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $blue-color;
+      }
+
+      .red-text {
+        color: $red-color;
+      }
+
+      .discover-button {
+        margin-top: 20px;
+        background-color: $blue-color;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .trusted-section {
+    width: 100%;
+    margin-top: 30px;
+
+    .trusted-small-text {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .trusted-large-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+
+      .red-text {
+        color: $red-color;
+      }
+    }
+
+    .trusted-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      .small-logo {
+        max-width: 100px;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column; 
+  }
+
+  .text-sections .text-block {
+    flex: 1 1 100%; 
+    border-right: none;
+    border-bottom: 2px dashed #2e2d2d;
+  }
+
+  .vision-button,
+  .discover-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-h1,
+  .homepage-h2 {
+    font-size: 1.5rem; 
+  }
+
+  .cards-container .card {
+    flex: 1 1 100%; 
+  }
+
+  .info-box .info-image {
+    width: 100%; 
+    max-width: 100%;
+  }
+
+  .info-box .info-text {
+    padding: 10px;
+  }
+
+  .trusted-large-text {
+    font-size: 1.5rem; 
+  }
+}

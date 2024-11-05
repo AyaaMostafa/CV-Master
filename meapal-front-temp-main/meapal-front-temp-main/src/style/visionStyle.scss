@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
+
+$blue-color: #182955;
+$red-color: #b7202f;
+
+.visionpage {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 100px;
+
+  .visionpage-h2 {
+    font-weight: bold;
+    color: $blue-color;
+    padding: 30px 0px;
+    .highlight {
+      color: $red-color;
+    }
+  }
+
+  .vision-text {
+    font-size: medium;
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 70px;
+  }
+
+  .vision-img {
+    width: 100%;
+    margin: 30px 0px;
+  }
+}
+
+// Small screens (mobiles)
+@media (max-width: 600px) {
+  .visionpage {
+    margin: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
+
+// Variables
+$circle-size: 34px;
+$circle-border: 4px;
+$blue-color: #182955;
+$red-color: #b7202f;
+
+
+.developmentpage {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 100px;
+  
+    .developmentpage-h2 {
+      font-weight: bold;
+      color: $blue-color;
+      padding: 30px 0px;
+      .highlight {
+        color: $red-color;
+      }
+    }
+}  
+
+.proj-titel-container{
+    width: 100%;
+    background-color: $red-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .proj-title{
+        color: white;
+        padding: 20px;
+        font-weight: 700;
+    }
+}
+
+.proj{
+    margin: 50px 0;
+}
+
+.proj-content{
+    font-size: large;
+    margin: 30px 0;
+    font-size: 20px;
+    font-family: 'Heebo', sans-serif;
+
+    li{
+        margin: 5px;
+    }
+}
+
+.heading-sm{
+    font-size: 20px;
+    font-weight: bold;
+    color: $blue-color;
+    padding: 30px 0px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+
+    span {
+        font-size: 20px;
+        font-family: 'Heebo', sans-serif;
+        padding: 10px;
+        background-color: #e8e8e8; 
+        border-radius: 5px; 
+        flex: 1 1 200px; 
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.homepage-responsive-h2 {
+  font-weight: bold;
+  color: $blue-color;
+  .highlight {
+    color: $red-color;
+  }
+}
+
+.homepage-responsive-text {
+  font-size: medium;
+  font-family: 'Heebo', sans-serif;
+}
+
+.homepage-responsive-img {
+  width: 100%;
+  margin: 30px 0px;
+}
+.vision-button {
+  margin-top: 10px;
+  background-color: rgb(175, 12, 47);
+  color: rgba(255, 255, 255, 0.904);
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px; 
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.title-highlight{
+  font-family: 'Saira Stencil One', sans-serif;
+  font-weight: 300;
+}
+.homepage-responsive {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px 100px;
+  margin-bottom: 0px;
+  align-items: center;
+}

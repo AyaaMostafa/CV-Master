@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
+
+$blue-color: #182955;
+$red-color: #b7202f;
+
+.jobspage {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 100px;
+
+  .jobspage-h2 {
+    font-weight: bold;
+    color: $blue-color;
+    padding: 30px 0px;
+    .highlight {
+      color: $red-color;
+    }
+  }
+
+  .jobs-text {
+    font-size: medium;
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 70px;
+  }
+}
+
+.application-button {
+  background-color: $red-color;
+  color: rgba(255, 255, 255, 0.904);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+// Small screens (mobiles)
+@media (max-width: 600px) {
+  .jobspage {
+    margin: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

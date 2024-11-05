@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
+
+// Variables
+$circle-size: 34px;
+$circle-border: 4px;
+$blue-color: #182955;
+$red-color: #b7202f;
+
+.policypage {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 100px;
+
+  .policypage-h2 {
+    font-weight: bold;
+    color: $blue-color;
+    padding: 30px 0px;
+    .highlight {
+      color: $red-color;
+    }
+  }
+
+  .policy-div {
+    display: flex;
+    padding: 20px 0px;
+
+    .policy-text {
+      margin-left: 20px;
+      font-size: 20px;
+      font-family: 'Heebo', sans-serif;
+    }
+  }
+  .circle-blue {
+    width: 30px;
+    height: 30px;
+    padding: 12px;
+    background-color: transparent;
+    border: 5px solid $blue-color;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  .circle-red {
+    width: 30px;
+    height: 30px;
+    padding: 12px;
+    background-color: transparent;
+    border: 5px solid $red-color;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+}
+
+// Small screens (mobiles)
+@media (max-width: 600px) {
+  .policypage {
+    margin: 20px 20px;
+  }
+
+  .policy-div {
+    .policy-text {
+      font-size: 16px !important;
+      margin-left: 0;
+    }
+
+    .circle-blue,
+    .circle-red {
+      width: 24px;
+      height: 24px;
+      padding: 8px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$blue-color: #182955;
+$red-color: #b7202f;
+// .footer-container {
+//     background-color: #00264d; 
+//     color: white;
+//     padding: 20px; 
+//     font-family: Arial, sans-serif;
+//     position: relative; 
+//     bottom: 0;
+//     width: 100%; 
+// }
+
+// .footer-content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+// .footer-icon-and-links {
+//     display: flex;
+//     justify-content: space-between;
+//     width: 90%;
+// }
+
+// .footer-icon img {
+//     width: 250px; 
+//     margin-right: 10px; 
+// }
+
+// .footer-section {
+//     margin: 0 10px; 
+// }
+
+// .footer-section h3 {
+//     margin-bottom: 5px; 
+//     font-size: 14px; 
+// }
+
+
+// .footer-section ul {
+//     list-style-type: none; 
+//     padding: 0; 
+// }
+
+// .footer-section ul li {
+//     margin-bottom: 5px; 
+// }
+
+// .footer-section ul li a {
+//     color: rgba(255, 255, 255, 0.645);
+//     text-decoration: none;
+//     font-size: 12px; 
+// }
+
+// .footer-contact-info {
+//     margin-top: 10px; 
+//     font-size: 16px; 
+//     text-align: start; 
+//     margin-right: 80%;
+// }
+
+// .footer-contact-info2 {
+//     text-align: start; 
+// }
+
+// .footer-divider {
+//     margin-top: 10px;
+//     text-align: center;
+//     width: 20%;
+// }
+
+// .footer-divider hr {
+//     border: 0;
+//     border-top: 1px solid white;
+// }
+
+// .footer-divider p {
+//     margin: 5px 0; 
+// }
+
+// .small-icon {
+//     width: 80px; 
+//     vertical-align: middle;
+// }
+.footer{
+    background-color: $blue-color;
+    color: white;
+
+    .p-footer{
+        font-family: 'Roboto', sans-serif;
+    }
+    .p-contact-us{
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.801);
+    }
+    .p-number{
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+
+    .list-title{
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+          color: #a5a5a5; // Light gray color for items
+          font-size: 1rem;
+          margin: 0.3rem 0; // Space between items
+    
+          &:hover {
+            color: #ffffff; // White color on hover
+            cursor: pointer;
+          }
+        }
+      }
+    
+}

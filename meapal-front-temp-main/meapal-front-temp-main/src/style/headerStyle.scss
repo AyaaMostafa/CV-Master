@@ -1,0 +1,135 @@
+$blue-color: #182955;
+$red-color: #b7202f;
+// .header {
+//     background-color: transparent;
+//     padding: 10px 20px;
+//   }
+
+//   .nav {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+
+//   .logo {
+//     margin-right: 20px;
+//   }
+
+//   .logo-icon {
+//     height: 40px;
+//   }
+
+//   .nav-links {
+//     display: flex;
+//     gap: 10px;
+//   }
+
+//   .nav-link:hover {
+//     color: rgb(175, 12, 47);
+//   }
+
+//   .language-icons {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+//     margin-left: 300px;
+//   }
+
+//   .language-icon {
+//     cursor: pointer;
+//     font-weight: bold;
+//   }
+
+//   .divider {
+//     width: 1px;
+//     height: 20px;
+//     background-color: rgba(211, 211, 211, 0.726);
+//   }
+
+.contact-button {
+  background-color: $red-color;
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
+.contact-button:hover {
+  background-color: #d62537 !important;
+  color: white !important;
+}
+.nav-link {
+  font-weight: 500;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  &.active {
+    color: $red-color !important;
+    font-weight: bold;
+  }
+}
+.navbar-toggler{
+  background-color: $blue-color;
+  
+  .navbar-toggler-icon-custom{
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.navbar-logo {
+  width: 15rem;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    width: 10rem;
+  }
+
+  @media (max-width: 576px) {
+    width: 8rem;
+  }
+}
+.header-options {
+  display: flex;
+  align-items: center;
+  gap: 1rem; // Adjust space between languages and button
+
+  .language-options {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .language {
+      color: black;
+      font-weight: normal;
+      cursor: pointer;
+      transition: 0.25s;
+
+      &.active {
+        color: $red-color;
+        font-weight: bold; 
+      }
+
+      &:hover{
+        color: rgb(99, 99, 99);
+      }
+    }
+
+    .separator {
+      color: black;
+      font-weight: normal;
+    }
+  }
+
+  .contact-button {
+    background-color: $red-color;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem; 
+    border: none;
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: #b71c1c; 
+    }
+  }
+}

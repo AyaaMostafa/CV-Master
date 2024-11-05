@@ -1,0 +1,21 @@
+// @import '../../public/home-bg.jpg';
+
+body {
+  text-transform: capitalize;
+  background-color: #ddd;
+  font-family: 'Heebo', sans-serif !important;
+  background-image: url("/public/planet.png");
+  background-size: 2500px 2200px;
+  animation: move 300s infinite;
+}
+@keyframes move {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
